@@ -2,16 +2,19 @@ import React from 'react';
 import { makeStyles, ThemeProvider } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
-import Typography from '@material-ui/core/Typography';
+import Button from '@material-ui/core/Button';
 import theme from '../Theme';
+import FitnessCenterIcon from '@material-ui/icons/FitnessCenter';
+import AttachMoneyIcon from '@material-ui/icons/AttachMoney';
+import MenuBookIcon from '@material-ui/icons/MenuBook';
+import IconButton from '@material-ui/core/IconButton';
+import Tooltip from '@material-ui/core/Tooltip';
 
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
   },
-  AppBar: {
-    backgroundColor: theme.palette.secondary,
-  },
+  AppBar: {},
   headerLink: {
     marginLeft: 'auto',
   },
@@ -26,23 +29,30 @@ export default function Header() {
   return (
     <ThemeProvider theme={theme}>
       <div className={classes.root}>
-        <AppBar position='static' className='AppBar'>
+        <AppBar position='static' color='transparent'>
           <Toolbar>
-            <Typography variant='h6' className={classes.logo}>
-              Logo
-            </Typography>
-            <Typography variant='h6' className={classes.headerLink}>
-              HWW
-            </Typography>
-            <Typography variant='h6' className={classes.headerLink}>
-              About
-            </Typography>
-            <Typography variant='h6' className={classes.headerLink}>
-              Contact
-            </Typography>
-            <Typography variant='h6' className={classes.headerLink}>
-              Blog
-            </Typography>
+            <Button className={classes.logo}>Logo</Button>
+            <Tooltip title='Health'>
+              <IconButton className={classes.headerLink} aria-label='Health'>
+                <FitnessCenterIcon color='inherit'></FitnessCenterIcon>
+              </IconButton>
+            </Tooltip>
+            <Tooltip title='Wealth'>
+              <IconButton className={classes.headerLink} aria-label='Wealth'>
+                <AttachMoneyIcon color='inherit'></AttachMoneyIcon>
+              </IconButton>
+            </Tooltip>
+            <Tooltip title='Wisdom'>
+              <IconButton className={classes.headerLink} aria-label='Wisdom'>
+                <MenuBookIcon color='inherit'></MenuBookIcon>
+              </IconButton>
+            </Tooltip>
+
+            <Button className={classes.headerLink}>About</Button>
+
+            <Button className={classes.headerLink}>Contact</Button>
+
+            <Button className={classes.headerLink}>Blog</Button>
           </Toolbar>
         </AppBar>
       </div>
