@@ -6,18 +6,28 @@ import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import Image from '../images/greek_god.jpeg';
-import CardMedia from '@material-ui/core/CardMedia';
 import theme from '../Theme';
 
 const useStyles = makeStyles((theme) => ({
-  jumboBtn: {
-    margin: '0 auto',
-  },
   media: {
     backgroundImage: `url(${Image})`,
     backgroundRepeat: 'no-repeat',
     backgroundSize: 'cover',
-    height: '75vh',
+    color: 'primary',
+    height: '45vh',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'flex-end',
+    textAlign: 'center',
+  },
+  jumboBtn: {
+    backgroundColor: 'primary',
+    marginTop: '2rem',
+  },
+  btnContainer: {
+    display: 'flex',
+    width: '200px',
+    margin: '0 auto',
   },
 }));
 
@@ -26,31 +36,20 @@ export default function Jumbotron() {
 
   return (
     <ThemeProvider theme={theme}>
-      <Card
-        className={(classes.root, classes.media)}
-        variant='outlined'
-        align='center'
-      >
+      <Card className={classes.media} variant='outlined' align='center'>
         <CardContent>
-          {/* <CardMedia
-            component='img'
-            alt='Contemplative Reptile'
-            height='200'
-            image={Image}
-            title='Contemplative Reptile'
-          /> */}
-          <Typography variant='h2'>Knowledge of Man</Typography>
+          <Typography variant='h1'>Knowledge of Man</Typography>
+          <CardActions className={classes.btnContainer}>
+            <Button
+              variant='contained'
+              size='large'
+              color='secondary'
+              className={classes.jumboBtn}
+            >
+              Lend To The Cause
+            </Button>
+          </CardActions>
         </CardContent>
-        <CardActions>
-          <Button
-            size='large'
-            variant='contained'
-            color='primary'
-            className={classes.jumboBtn}
-          >
-            Contribute
-          </Button>
-        </CardActions>
       </Card>
     </ThemeProvider>
   );
