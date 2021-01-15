@@ -9,6 +9,7 @@ import AttachMoneyIcon from '@material-ui/icons/AttachMoney';
 import MenuBookIcon from '@material-ui/icons/MenuBook';
 import IconButton from '@material-ui/core/IconButton';
 import Tooltip from '@material-ui/core/Tooltip';
+import Image from '../images/kom_logo.jpg';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -17,9 +18,12 @@ const useStyles = makeStyles((theme) => ({
   AppBar: {},
   headerLink: {
     marginLeft: 'auto',
+    color: 'black',
   },
   logo: {
-    marginLeft: '15px',
+    marginLeft: '5px',
+    height: '50px',
+    width: '65px',
   },
 }));
 
@@ -31,7 +35,11 @@ export default function Header() {
       <div className={classes.root}>
         <AppBar position='static' color='transparent'>
           <Toolbar>
-            <Button className={classes.logo}>Logo</Button>
+            <Button style={{ backgroundColor: 'transparent' }}>
+              <img className={classes.logo} src={Image} alt='Logo' />
+            </Button>
+            <Button className={classes.headerLink}>Blog</Button>
+
             <Tooltip title='Health'>
               <IconButton className={classes.headerLink} aria-label='Health'>
                 <FitnessCenterIcon color='inherit'></FitnessCenterIcon>
@@ -51,8 +59,6 @@ export default function Header() {
             <Button className={classes.headerLink}>About</Button>
 
             <Button className={classes.headerLink}>Contact</Button>
-
-            <Button className={classes.headerLink}>Blog</Button>
           </Toolbar>
         </AppBar>
       </div>
