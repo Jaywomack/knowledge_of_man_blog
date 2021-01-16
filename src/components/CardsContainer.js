@@ -2,6 +2,7 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import { Typography } from '@material-ui/core';
+import Image from '../images/pillars_of_character.png';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -13,15 +14,14 @@ const useStyles = makeStyles((theme) => ({
       height: theme.spacing(16),
     },
   },
-  papers: {
-    backgroundColor: 'orange',
-    color: 'white',
-    height: '15vh',
-    width: '15vw',
-    display: 'flex',
-    textAlign: 'center',
-    justifyContent: 'center',
-    alignItems: 'center',
+
+  pillarsImage: {
+    height: '100%',
+    width: '100%',
+  },
+  pillarsContainer: {
+    height: '50vh',
+    width: '100%',
   },
 }));
 
@@ -30,13 +30,15 @@ export default function CardsContainer() {
 
   return (
     <div className={classes.root}>
-      <Paper className={classes.papers} elevation={6}>
-        <Typography>Health</Typography>
+      <Paper className={classes.pillarsContainer} elevation={6}>
+        <img src={Image} alt='' className={classes.pillarsImage} />
       </Paper>
-      <Paper className={classes.papers} elevation={6}>
+
+      <Paper elevation={6}>
         <Typography>Wealth</Typography>
       </Paper>
-      <Paper className={classes.papers} elevation={6}>
+
+      <Paper elevation={6}>
         <Typography>Wisdom</Typography>
       </Paper>
     </div>
