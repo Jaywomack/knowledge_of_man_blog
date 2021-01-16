@@ -18,12 +18,13 @@ const useStyles = makeStyles((theme) => ({
   AppBar: {},
   headerLink: {
     marginLeft: 'auto',
-    color: 'black',
   },
   logo: {
     marginLeft: '5px',
-    height: '50px',
-    width: '65px',
+    height: '70px',
+    width: '85px',
+    border: `2px solid #87240f`,
+    borderRadius: '5%',
   },
 }));
 
@@ -33,32 +34,38 @@ export default function Header() {
   return (
     <ThemeProvider theme={theme}>
       <div className={classes.root}>
-        <AppBar position='static' color='transparent'>
+        <AppBar position='static' color='primary'>
           <Toolbar>
             <Button style={{ backgroundColor: 'transparent' }}>
               <img className={classes.logo} src={Image} alt='Logo' />
             </Button>
-            <Button className={classes.headerLink}>Blog</Button>
+            <Button className={classes.headerLink} color='secondary'>
+              Blog
+            </Button>
 
             <Tooltip title='Health'>
               <IconButton className={classes.headerLink} aria-label='Health'>
-                <FitnessCenterIcon color='inherit'></FitnessCenterIcon>
+                <FitnessCenterIcon color='secondary'></FitnessCenterIcon>
               </IconButton>
             </Tooltip>
             <Tooltip title='Wealth'>
               <IconButton className={classes.headerLink} aria-label='Wealth'>
-                <AttachMoneyIcon color='inherit'></AttachMoneyIcon>
+                <AttachMoneyIcon color='secondary'></AttachMoneyIcon>
               </IconButton>
             </Tooltip>
             <Tooltip title='Wisdom'>
               <IconButton className={classes.headerLink} aria-label='Wisdom'>
-                <MenuBookIcon color='inherit'></MenuBookIcon>
+                <MenuBookIcon color='secondary'></MenuBookIcon>
               </IconButton>
             </Tooltip>
 
-            <Button className={classes.headerLink}>About</Button>
+            <Button className={classes.headerLink} color='secondary'>
+              About
+            </Button>
 
-            <Button className={classes.headerLink}>Contact</Button>
+            <Button className={classes.headerLink} color='secondary'>
+              Contact
+            </Button>
           </Toolbar>
         </AppBar>
       </div>

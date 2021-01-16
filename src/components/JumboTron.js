@@ -1,33 +1,29 @@
 import React from 'react';
 import { makeStyles, ThemeProvider } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
-import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
-import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
-import Image from '../images/greek_god.jpeg';
+import Image from '../images/pillars_of_character.png';
 import theme from '../Theme';
 
 const useStyles = makeStyles((theme) => ({
   media: {
-    backgroundImage: `url(${Image})`,
-    backgroundRepeat: 'no-repeat',
-    backgroundSize: 'cover',
-    color: 'primary',
-    height: '45vh',
+    height: '30vh',
     display: 'flex',
+    flexWrap: 'wrap',
     justifyContent: 'center',
-    alignItems: 'flex-end',
+    alignItems: 'flex-start',
     textAlign: 'center',
   },
-  jumboBtn: {
-    backgroundColor: 'primary',
-    marginTop: '2rem',
+  jumboHeader: {
+    fontFamily: 'Cinzel Decorative',
+    marginBottom: 0,
+    paddingBottom: 0,
+    display: 'block',
   },
-  btnContainer: {
-    display: 'flex',
-    width: '200px',
-    margin: '0 auto',
+
+  pillarsImage: {
+    width: '75%',
   },
 }));
 
@@ -37,19 +33,10 @@ export default function Jumbotron() {
   return (
     <ThemeProvider theme={theme}>
       <Card className={classes.media} variant='outlined' align='center'>
-        <CardContent>
-          <Typography variant='h1'>Knowledge of Man</Typography>
-          <CardActions className={classes.btnContainer}>
-            <Button
-              variant='contained'
-              size='large'
-              color='secondary'
-              className={classes.jumboBtn}
-            >
-              Lend To The Cause
-            </Button>
-          </CardActions>
-        </CardContent>
+        <Typography variant='h1' className={classes.jumboHeader}>
+          Knowledge of Man
+        </Typography>
+        <img className={classes.pillarsImage} src={Image} alt='' />
       </Card>
     </ThemeProvider>
   );

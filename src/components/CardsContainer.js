@@ -14,15 +14,6 @@ const useStyles = makeStyles((theme) => ({
       height: theme.spacing(16),
     },
   },
-
-  pillarsImage: {
-    height: '100%',
-    width: '100%',
-  },
-  pillarsContainer: {
-    height: '50vh',
-    width: '100%',
-  },
 }));
 
 export default function CardsContainer() {
@@ -30,8 +21,8 @@ export default function CardsContainer() {
 
   return (
     <div className={classes.root}>
-      <Paper className={classes.pillarsContainer} elevation={6}>
-        <img src={Image} alt='' className={classes.pillarsImage} />
+      <Paper elevation={6}>
+        <Typography>Wealth</Typography>
       </Paper>
 
       <Paper elevation={6}>
