@@ -24,3 +24,4 @@ export default theme;
 //'#63A088'
 //'#282727'
 //'#FFAD6A'
+// 7F3300 parchment ink color

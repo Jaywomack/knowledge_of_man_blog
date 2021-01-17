@@ -18,7 +18,6 @@ const useStyles = makeStyles((theme) => ({
     backgroundSize: 'cover',
   },
   card: {
-    background: ' rgb(2,0,36)',
     background:
       'linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(255,173,106,1) 6%, rgba(214,204,169,1) 91%)',
     boxShadow:
