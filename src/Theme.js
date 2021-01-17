@@ -10,7 +10,12 @@ const theme = createMuiTheme({
     },
   },
   typography: {
-    fontFamily: 'Merriweather',
+    primary: {
+      fontFamily: 'Merriweather',
+    },
+    secondary: {
+      fontFamily: 'Cinzel Decorative',
+    },
   },
 });
 export default theme;
