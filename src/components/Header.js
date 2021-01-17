@@ -23,8 +23,9 @@ const useStyles = makeStyles((theme) => ({
     marginLeft: '5px',
     height: '70px',
     width: '85px',
-    border: `2px solid #87240f`,
+    border: `2px solid black`,
     borderRadius: '5%',
+    filter: 'invert(95%)',
   },
 }));
 

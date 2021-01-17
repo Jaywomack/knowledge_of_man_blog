@@ -2,13 +2,12 @@ import React from 'react';
 import { makeStyles, ThemeProvider } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import Typography from '@material-ui/core/Typography';
-import Image from '../images/pillars_of_character.png';
+
 import theme from '../Theme';
 
 const useStyles = makeStyles((theme) => ({
   jumboHeader: {
     fontFamily: 'Cinzel Decorative',
-    background: ' rgb(2,0,36)',
     background:
       'linear-gradient(270deg, rgba(2,0,36,1) 0%, rgba(255,173,106,1) 6%, rgba(215,204,169,1) 91%)',
     marginBottom: 0,
@@ -21,7 +20,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function Jumbotron() {
+export default function Title() {
   const classes = useStyles();
 
   return (
@@ -30,7 +29,6 @@ export default function Jumbotron() {
         <Typography variant='h1' className={classes.jumboHeader}>
           Knowledge of Man
         </Typography>
-        {/* <img className={classes.pillarsImage} src={Image} alt='' /> */}
       </Card>
     </ThemeProvider>
   );
