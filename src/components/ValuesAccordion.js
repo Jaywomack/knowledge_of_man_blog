@@ -7,11 +7,12 @@ import Typography from '@material-ui/core/Typography';
 import FitnessCenterIcon from '@material-ui/icons/FitnessCenter';
 import AttachMoneyIcon from '@material-ui/icons/AttachMoney';
 import MenuBookIcon from '@material-ui/icons/MenuBook';
-import Image from '../images/letter_parchment.webp';
+import Image from '../assets/images/letter_parchment.webp';
 
 const useStyles = makeStyles((theme) => ({
   root: {
     width: '100%',
+    background: '#7F3300',
   },
   heading: {
     fontSize: theme.typography.pxToRem(15),
@@ -29,7 +30,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function SimpleAccordion() {
+export default function ValuesAccordion() {
   const classes = useStyles();
 
   return (
