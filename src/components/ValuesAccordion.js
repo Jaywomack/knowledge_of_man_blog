@@ -30,7 +30,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function ValuesAccordion() {
+const ValuesAccordion = (props) => {
   const classes = useStyles();
 
   return (
@@ -46,8 +46,7 @@ export default function ValuesAccordion() {
         </AccordionSummary>
         <AccordionDetails className={classes.accordionDetails}>
           <Typography fontWeight='fontWeightBold'>
-            <p>
-              {' '}
+            <Typography component={'span'}>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad
               impedit corporis maiores vitae esse quisquam nobis laborum
               repellat at porro, provident tenetur odit nemo rem unde soluta?
@@ -58,9 +57,8 @@ export default function ValuesAccordion() {
               illum facere ipsa dolorem expedita ipsam asperiores enim voluptas
               tenetur id voluptates quis dignissimos ad, quae temporibus. Aut,
               ut asperiores
-            </p>
-            <p>
-              {' '}
+            </Typography>
+            <Typography component={'span'}>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad
               impedit corporis maiores vitae esse quisquam nobis laborum
               repellat at porro, provident tenetur odit nemo rem unde soluta?
@@ -71,9 +69,8 @@ export default function ValuesAccordion() {
               illum facere ipsa dolorem expedita ipsam asperiores enim voluptas
               tenetur id voluptates quis dignissimos ad, quae temporibus. Aut,
               ut asperiores
-            </p>
-            <p>
-              {' '}
+            </Typography>
+            <Typography component={'span'}>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad
               impedit corporis maiores vitae esse quisquam nobis laborum
               repellat at porro, provident tenetur odit nemo rem unde soluta?
@@ -84,9 +81,8 @@ export default function ValuesAccordion() {
               illum facere ipsa dolorem expedita ipsam asperiores enim voluptas
               tenetur id voluptates quis dignissimos ad, quae temporibus. Aut,
               ut asperiores
-            </p>
-            <p>
-              {' '}
+            </Typography>
+            <Typography component={'span'}>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad
               impedit corporis maiores vitae esse quisquam nobis laborum
               repellat at porro, provident tenetur odit nemo rem unde soluta?
@@ -97,7 +93,7 @@ export default function ValuesAccordion() {
               illum facere ipsa dolorem expedita ipsam asperiores enim voluptas
               tenetur id voluptates quis dignissimos ad, quae temporibus. Aut,
               ut asperiores
-            </p>
+            </Typography>
           </Typography>
         </AccordionDetails>
       </Accordion>
@@ -112,8 +108,7 @@ export default function ValuesAccordion() {
         </AccordionSummary>
         <AccordionDetails className={classes.accordionDetails}>
           <Typography fontWeight='fontWeightBold'>
-            <p>
-              {' '}
+            <Typography component={'span'}>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad
               impedit corporis maiores vitae esse quisquam nobis laborum
               repellat at porro, provident tenetur odit nemo rem unde soluta?
@@ -124,9 +119,8 @@ export default function ValuesAccordion() {
               illum facere ipsa dolorem expedita ipsam asperiores enim voluptas
               tenetur id voluptates quis dignissimos ad, quae temporibus. Aut,
               ut asperiores
-            </p>
-            <p>
-              {' '}
+            </Typography>
+            <Typography component={'span'}>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad
               impedit corporis maiores vitae esse quisquam nobis laborum
               repellat at porro, provident tenetur odit nemo rem unde soluta?
@@ -137,9 +131,8 @@ export default function ValuesAccordion() {
               illum facere ipsa dolorem expedita ipsam asperiores enim voluptas
               tenetur id voluptates quis dignissimos ad, quae temporibus. Aut,
               ut asperiores
-            </p>
-            <p>
-              {' '}
+            </Typography>
+            <Typography component={'span'}>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad
               impedit corporis maiores vitae esse quisquam nobis laborum
               repellat at porro, provident tenetur odit nemo rem unde soluta?
@@ -150,9 +143,8 @@ export default function ValuesAccordion() {
               illum facere ipsa dolorem expedita ipsam asperiores enim voluptas
               tenetur id voluptates quis dignissimos ad, quae temporibus. Aut,
               ut asperiores
-            </p>
-            <p>
-              {' '}
+            </Typography>
+            <Typography component={'span'}>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad
               impedit corporis maiores vitae esse quisquam nobis laborum
               repellat at porro, provident tenetur odit nemo rem unde soluta?
@@ -163,7 +155,7 @@ export default function ValuesAccordion() {
               illum facere ipsa dolorem expedita ipsam asperiores enim voluptas
               tenetur id voluptates quis dignissimos ad, quae temporibus. Aut,
               ut asperiores
-            </p>
+            </Typography>
           </Typography>
         </AccordionDetails>
       </Accordion>
@@ -178,8 +170,7 @@ export default function ValuesAccordion() {
         </AccordionSummary>
         <AccordionDetails className={classes.accordionDetails}>
           <Typography fontWeight='fontWeightBold'>
-            <p>
-              {' '}
+            <Typography component={'span'}>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad
               impedit corporis maiores vitae esse quisquam nobis laborum
               repellat at porro, provident tenetur odit nemo rem unde soluta?
@@ -190,9 +181,8 @@ export default function ValuesAccordion() {
               illum facere ipsa dolorem expedita ipsam asperiores enim voluptas
               tenetur id voluptates quis dignissimos ad, quae temporibus. Aut,
               ut asperiores
-            </p>
-            <p>
-              {' '}
+            </Typography>
+            <Typography component={'span'}>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad
               impedit corporis maiores vitae esse quisquam nobis laborum
               repellat at porro, provident tenetur odit nemo rem unde soluta?
@@ -203,9 +193,8 @@ export default function ValuesAccordion() {
               illum facere ipsa dolorem expedita ipsam asperiores enim voluptas
               tenetur id voluptates quis dignissimos ad, quae temporibus. Aut,
               ut asperiores
-            </p>
-            <p>
-              {' '}
+            </Typography>
+            <Typography component={'span'}>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad
               impedit corporis maiores vitae esse quisquam nobis laborum
               repellat at porro, provident tenetur odit nemo rem unde soluta?
@@ -216,9 +205,8 @@ export default function ValuesAccordion() {
               illum facere ipsa dolorem expedita ipsam asperiores enim voluptas
               tenetur id voluptates quis dignissimos ad, quae temporibus. Aut,
               ut asperiores
-            </p>
-            <p>
-              {' '}
+            </Typography>
+            <Typography component={'span'}>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad
               impedit corporis maiores vitae esse quisquam nobis laborum
               repellat at porro, provident tenetur odit nemo rem unde soluta?
@@ -229,10 +217,11 @@ export default function ValuesAccordion() {
               illum facere ipsa dolorem expedita ipsam asperiores enim voluptas
               tenetur id voluptates quis dignissimos ad, quae temporibus. Aut,
               ut asperiores
-            </p>
+            </Typography>
           </Typography>
         </AccordionDetails>
       </Accordion>
     </div>
   );
-}
+};
+export default ValuesAccordion;
