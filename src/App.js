@@ -8,6 +8,7 @@ import Wealth from './pages/Wealth';
 import Wisdom from './pages/Wisdom';
 import About from './pages/About';
 import Contact from './pages/Contact';
+import Legal from './pages/Legal';
 
 import Footer from './components/Footer';
 
@@ -57,7 +58,14 @@ export default function App() {
           component={Wisdom}
           render={(props) => <Wisdom {...props} />}
         />
+        <Route
+          exact
+          path='/legal'
+          component={Legal}
+          render={(props) => <Legal {...props} />}
+        />
       </Switch>
+      <Footer />
     </div>
   );
 }

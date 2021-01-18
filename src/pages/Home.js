@@ -10,7 +10,6 @@ const Home = (props) => {
       <Title />
       <CardsContainer />
       <ValuesAccordion />
-      <Footer />
     </div>
   );
 };

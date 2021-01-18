@@ -3,6 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import { ThemeProvider, Typography } from '@material-ui/core';
 import Image from '../assets/images/parchment.png';
+import theme from '../Theme';
 
 const useStyles = makeStyles((theme) => ({
   paperContainer: {
@@ -31,7 +32,7 @@ export default function CardsContainer() {
   const classes = useStyles();
 
   return (
-    <ThemeProvider>
+    <ThemeProvider theme={theme}>
       <div className={classes.paperContainer}>
         <Paper className={classes.card} elevation={6}>
           <Typography variant='h3'>Health</Typography>

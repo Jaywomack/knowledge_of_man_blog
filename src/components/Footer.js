@@ -1,4 +1,5 @@
 import React from 'react';
+import { withRouter } from 'react-router-dom';
 import { makeStyles, ThemeProvider } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
@@ -38,40 +39,82 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function Footer() {
+const Footer = (props) => {
+  const { history } = props;
   const classes = useStyles();
+  const handleMenuClick = (pageURL) => {
+    history.push(pageURL);
+  };
 
   return (
     <ThemeProvider theme={theme}>
       <div className={classes.root}>
         <AppBar position='static' className={classes.appBar}>
           <Toolbar>
-            <Button style={{ backgroundColor: 'transparent' }}>
+            <Button
+              onClick={() => handleMenuClick('/')}
+              style={{ backgroundColor: 'transparent' }}
+            >
               <img className={classes.logo} src={Image} alt='Logo' />
             </Button>
-            <Button className={classes.headerLink}>Blog</Button>
-            <Button className={classes.headerLink}>Legal</Button>
+            <Button
+              onClick={() => handleMenuClick('/blog')}
+              className={classes.headerLink}
+            >
+              Blog
+            </Button>
+            <Button
+              onClick={() => handleMenuClick('/legal')}
+              className={classes.headerLink}
+            >
+              Legal
+            </Button>
 
             <Tooltip title='Health'>
-              <IconButton className={classes.headerLink} aria-label='Health'>
+              <IconButton
+                onClick={() => handleMenuClick('/health')}
+                className={classes.headerLink}
+                aria-label='Health'
+              >
                 <FitnessCenterIcon></FitnessCenterIcon>
               </IconButton>
             </Tooltip>
             <Tooltip title='Wealth'>
-              <IconButton className={classes.headerLink} aria-label='Wealth'>
+              <IconButton
+                onClick={() => handleMenuClick('/wealth')}
+                className={classes.headerLink}
+                aria-label='Wealth'
+              >
                 <AttachMoneyIcon></AttachMoneyIcon>
               </IconButton>
             </Tooltip>
             <Tooltip title='Wisdom'>
-              <IconButton className={classes.headerLink} aria-label='Wisdom'>
+              <IconButton
+                onClick={() => handleMenuClick('/wisdom')}
+                className={classes.headerLink}
+                aria-label='Wisdom'
+              >
                 <MenuBookIcon></MenuBookIcon>
               </IconButton>
             </Tooltip>
 
-            <Button className={classes.headerLink}>About</Button>
+            <Button
+              onClick={() => handleMenuClick('/about')}
+              className={classes.headerLink}
+            >
+              About
+            </Button>
 
-            <Button className={classes.headerLink}>Contact</Button>
-            <Button style={{ backgroundColor: 'transparent' }}>
+            <Button
+              onClick={() => handleMenuClick('/contact')}
+              className={classes.headerLink}
+            >
+              Contact
+            </Button>
+            <Button
+              onClick={() => handleMenuClick('/')}
+              style={{ backgroundColor: 'transparent' }}
+            >
               <img className={classes.logo} src={Image} alt='Logo' />
             </Button>
           </Toolbar>
@@ -86,4 +129,6 @@ export default function Footer() {
       </div>
     </ThemeProvider>
   );
-}
+};
+
+export default withRouter(Footer);
