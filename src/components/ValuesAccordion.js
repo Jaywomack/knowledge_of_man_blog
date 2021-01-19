@@ -28,6 +28,9 @@ const useStyles = makeStyles((theme) => ({
     color: 'black',
     padding: '25px',
   },
+  accordionIcon: {
+    color: '#ff911c',
+  },
 }));
 
 const ValuesAccordion = (props) => {
@@ -38,7 +41,12 @@ const ValuesAccordion = (props) => {
       <Accordion>
         <AccordionSummary
           className={classes.accordionTitle}
-          expandIcon={<FitnessCenterIcon fontSize='large' />}
+          expandIcon={
+            <FitnessCenterIcon
+              className={classes.accordionIcon}
+              fontSize='large'
+            />
+          }
           aria-controls='panel1a-content'
           id='panel1a-header'
         >
@@ -100,7 +108,12 @@ const ValuesAccordion = (props) => {
       <Accordion>
         <AccordionSummary
           className={classes.accordionTitle}
-          expandIcon={<AttachMoneyIcon fontSize='large' />}
+          expandIcon={
+            <AttachMoneyIcon
+              className={classes.accordionIcon}
+              fontSize='large'
+            />
+          }
           aria-controls='panel2a-content'
           id='panel2a-header'
         >
@@ -162,7 +175,9 @@ const ValuesAccordion = (props) => {
       <Accordion>
         <AccordionSummary
           className={classes.accordionTitle}
-          expandIcon={<MenuBookIcon fontSize='large' />}
+          expandIcon={
+            <MenuBookIcon className={classes.accordionIcon} fontSize='large' />
+          }
           aria-controls='panel3a-content'
           id='panel3a-header'
         >
