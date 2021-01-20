@@ -1,4 +1,4 @@
-import React, { Profiler } from 'react';
+import React from 'react';
 import Title from '../components/Title';
 import CardsContainer from '../components/CardsContainer';
 import ValuesAccordion from '../components/ValuesAccordion';

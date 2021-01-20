@@ -17,53 +17,14 @@ export default function App() {
     <div className='App'>
       <Header stickyHeader />
       <Switch>
-        <Route
-          exact
-          from='/'
-          component={Home}
-          render={(props) => <Home {...props} />}
-        />
-        <Route
-          path='/contact'
-          component={Contact}
-          render={(props) => <Contact {...props} />}
-        />
-        <Route
-          exact
-          path='/about'
-          component={About}
-          render={(props) => <About {...props} />}
-        />
-        <Route
-          exact
-          path='/blog'
-          component={Blog}
-          render={(props) => <Blog {...props} />}
-        />
-        <Route
-          exact
-          path='/health'
-          component={Health}
-          render={(props) => <Health {...props} />}
-        />
-        <Route
-          exact
-          path='/wealth'
-          component={Wealth}
-          render={(props) => <Wealth {...props} />}
-        />
-        <Route
-          exact
-          path='/wisdom'
-          component={Wisdom}
-          render={(props) => <Wisdom {...props} />}
-        />
-        <Route
-          exact
-          path='/legal'
-          component={Legal}
-          render={(props) => <Legal {...props} />}
-        />
+        <Route exact from='/' render={(props) => <Home {...props} />} />
+        <Route path='/contact' render={(props) => <Contact {...props} />} />
+        <Route exact path='/about' render={(props) => <About {...props} />} />
+        <Route exact path='/blog' render={(props) => <Blog {...props} />} />
+        <Route exact path='/health' render={(props) => <Health {...props} />} />
+        <Route exact path='/wealth' render={(props) => <Wealth {...props} />} />
+        <Route exact path='/wisdom' render={(props) => <Wisdom {...props} />} />
+        <Route exact path='/legal' render={(props) => <Legal {...props} />} />
       </Switch>
       <Footer variant='main1' />
     </div>
