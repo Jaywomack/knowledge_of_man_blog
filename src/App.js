@@ -15,7 +15,7 @@ import Footer from './components/Footer';
 export default function App() {
   return (
     <div className='App'>
-      <Header />
+      <Header stickyHeader />
       <Switch>
         <Route
           exact
@@ -65,7 +65,7 @@ export default function App() {
           render={(props) => <Legal {...props} />}
         />
       </Switch>
-      <Footer />
+      <Footer variant='main1' />
     </div>
   );
 }

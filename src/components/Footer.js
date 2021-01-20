@@ -16,6 +16,8 @@ import Typography from '@material-ui/core/Typography';
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
+    marginTop: 'auto',
+    bottom: 0,
   },
   headerLink: {
     margin: '0 auto',
