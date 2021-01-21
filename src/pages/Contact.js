@@ -7,6 +7,7 @@ import TextareaAutosize from '@material-ui/core/TextareaAutosize';
 import Typography from '@material-ui/core/Typography';
 import FormControl from '@material-ui/core/FormControl';
 import Button from '@material-ui/core/Button';
+import Title from '../components/Title';
 import theme from '../Theme';
 
 import Image from '../assets/images/rotary_phone.png';
@@ -56,6 +57,7 @@ export default function SimplePaper() {
 
   return (
     <ThemeProvider theme={theme}>
+      <Title />
       <div className={classes.root}>
         <Paper className={classes.paperContainer} elevation={3}>
           <Card className={classes.card}>
