@@ -27,7 +27,7 @@ export default function Title() {
     <ThemeProvider theme={theme}>
       <Card className={classes.media} align='center'>
         <Typography variant='h1' className={classes.jumboHeader}>
-          Knowledge of Man
+          The Knowledge of Man
         </Typography>
       </Card>
     </ThemeProvider>

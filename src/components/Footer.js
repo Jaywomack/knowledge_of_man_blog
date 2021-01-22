@@ -121,7 +121,7 @@ const Footer = (props) => {
             </Button>
           </Toolbar>
           <div className={classes.copyright}>
-            <Typography variant='h4'>Knowledge of Man</Typography>
+            <Typography variant='h4'>The Knowledge of Man</Typography>
 
             <Typography variant='h5'>
               Copyright &copy; 2021 All Rights Reserved
